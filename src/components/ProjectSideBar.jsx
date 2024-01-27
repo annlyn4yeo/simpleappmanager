@@ -18,9 +18,9 @@ export default function ProjectSideBar({
             "w-full text-left px-4 py-2 my-1 rounded-md hover:text-stone-100 hover:bg-stone-500";
 
           if (project.id === selectedProjectId) {
-            classString += "bg-stone-800 text-stone-200";
+            classString += " bg-stone-800 text-stone-200";
           } else {
-            classString += "text-stone-400";
+            classString += " text-stone-400";
           }
 
           return (
