@@ -1,13 +1,16 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
+import Modal from "./Modal";
 
 export default function NewTasks({ addTask }) {
-  const [newTask, setNewTask] = useState();
-
+  const [newTask, setNewTask] = useState("");
   const handleChange = (event) => {
     setNewTask(event.target.value);
   };
 
   const handleAddClick = () => {
+    if (newTask.trim() === "") {
+      return;
+    }
     addTask(newTask);
     setNewTask("");
   };
